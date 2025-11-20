@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão Geral - Victor Wandriel Bilro dos Santos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .scroll-mt {
+            scroll-margin-top: 6rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-header border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-tight">BILRO.DIGITAL</h1>
+                        <span class="text-xs text-slate-500 block">Perfil Corporativo</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#resumo" class="hover:text-blue-600 transition">Resumo</a>
+                    <a href="#sobre" class="hover:text-blue-600 transition">Sobre</a>
+                    <a href="#detalhes" class="hover:text-blue-600 transition">Detalhes</a>
+                    <a href="#atividade" class="hover:text-blue-600 transition">Atividade</a>
+                    <a href="#privacidade" class="hover:text-blue-600 transition">Privacidade</a>
+                    <a href="#contato" class="hover:text-blue-600 transition">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Status Section -->
+    <header class="pt-28 pb-12 bg-white border-b border-slate-200 scroll-mt" id="resumo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border border-green-200">
+                            <i class="fa-solid fa-check-circle mr-1"></i> Ativa
+                        </span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border border-blue-200">
+                            Matriz
+                        </span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">VICTOR WANDRIEL BILRO DOS SANTOS</h2>
+                    <p class="text-slate-500 flex items-center gap-2">
+                        <i class="fa-regular fa-id-card"></i> CNPJ: <span class="font-mono select-all font-medium text-slate-700">58.120.832/0001-21</span>
+                        <button onclick="copyCNPJ()" class="text-blue-600 hover:text-blue-800 text-sm font-medium ml-2 focus:outline-none" title="Copiar CNPJ">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </p>
+                </div>
+                <div class="flex flex-col items-end text-right hidden md:block">
+                    <p class="text-sm text-slate-400">Última Atualização</p>
+                    <p class="font-semibold text-slate-700">08/11/2025 21:00</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- Cards de Destaque -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card Natureza -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-sm font-semibold text-slate-400 uppercase">Natureza Jurídica</h3>
+                    <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                </div>
+                <p class="text-lg font-bold text-slate-800">Empresário (Individual)</p>
+                <p class="text-sm text-slate-500 mt-1">Código 213-5</p>
+            </div>
+
+            <!-- Card Regime -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-sm font-semibold text-slate-400 uppercase">Regime Tributário</h3>
+                    <div class="p-2 bg-purple-50 text-purple-600 rounded-lg">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <p class="text-lg font-bold text-slate-800">Simples Nacional</p>
+                    <i class="fa-solid fa-circle-check text-green-500" title="Optante"></i>
+                </div>
+                <p class="text-sm text-slate-500 mt-1">Desde 15/11/2024 (MEI)</p>
+            </div>
+
+            <!-- Card Capital -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-sm font-semibold text-slate-400 uppercase">Capital Social</h3>
+                    <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                </div>
+                <p class="text-2xl font-bold text-slate-800">R$ 5.000,00</p>
+                <p class="text-sm text-slate-500 mt-1">Capital integralizado</p>
+            </div>
+        </div>
+
+        <!-- Seção Sobre Nós (NOVA) -->
+        <section id="sobre" class="scroll-mt bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg text-white overflow-hidden">
+            <div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-2/3 space-y-4">
+                    <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                        <i class="fa-solid fa-rocket text-blue-300"></i> Sobre a BILRO.DIGITAL
+                    </h2>
+                    <p class="text-blue-100 leading-relaxed text-lg">
+                        Nascemos com a missão de conectar marcas ao seu público ideal. Localizada no coração de São Paulo, na Avenida Paulista, a <strong>BILRO.DIGITAL</strong> é especializada em estratégias de promoção de vendas e comunicação assertiva.
+                    </p>
+                    <p class="text-blue-100 leading-relaxed">
+                        Combinamos análise de dados com criatividade para oferecer soluções que geram visibilidade e resultados reais. Seja no ambiente físico ou digital, nosso compromisso é com o crescimento sustentável do seu negócio, garantindo que sua mensagem chegue a quem realmente importa.
+                    </p>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center">
+                        <i class="fa-solid fa-bullhorn text-5xl mb-4 text-blue-200"></i>
+                        <h3 class="font-bold text-xl">Foco em Resultados</h3>
+                        <p class="text-sm text-blue-200 mt-2">Estratégias personalizadas para promoção e vendas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Coluna Esquerda: Detalhes (2/3) -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Seção Detalhes Cadastrais -->
+                <section id="detalhes" class="scroll-mt bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+                        <h3 class="font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-list text-blue-500"></i> Dados Cadastrais
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6">
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Razão Social</dt>
+                                <dd class="text-sm font-semibold text-slate-800">58.120.832 VICTOR WANDRIEL BILRO DOS SANTOS</dd>
+                            </div>
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Nome Fantasia</dt>
+                                <dd class="text-sm text-slate-400 italic">- Não consta -</dd>
+                            </div>
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Data de Abertura</dt>
+                                <dd class="text-sm text-slate-800">15/11/2024</dd>
+                            </div>
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Situação Cadastral</dt>
+                                <dd class="text-sm text-slate-800">ATIVA (Desde 15/11/2024)</dd>
+                            </div>
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Motivo Situação</dt>
+                                <dd class="text-sm text-slate-800">SEM MOTIVO</dd>
+                            </div>
+                            <div class="border-b border-slate-100 pb-2">
+                                <dt class="text-xs font-medium text-slate-500 uppercase mb-1">Porte da Empresa</dt>
+                                <dd class="text-sm text-slate-800">Microempreendedor Individual (MEI)</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </section>
+
+                <!-- Seção Atividade Econômica -->
+                <section id="atividade" class="scroll-mt bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-100 bg-slate-50">
+                        <h3 class="font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-blue-500"></i> Atividade Econômica (CNAE)
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded uppercase mb-2 inline-block">Principal</span>
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 text-slate-400"><i class="fa-solid fa-star"></i></div>
+                                <div>
+                                    <p class="font-bold text-lg text-slate-800">73.19-0-02 - Promoção de vendas</p>
+                                    <p class="text-sm text-slate-600 mt-1">Esta atividade compreende a promoção de vendas e a publicidade no local da venda, distribuição de folhetos e material publicitário.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-100 pt-4 mt-4">
+                            <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded uppercase mb-2 inline-block">Secundárias</span>
+                            <p class="text-sm text-slate-400 italic mt-1">- Nenhuma atividade secundária registrada -</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Coluna Direita: Contato e Localização (1/3) -->
+            <div class="lg:col-span-1 space-y-8">
+                
+                <!-- Card Contato (Atualizado) -->
+                <div id="contato" class="scroll-mt bg-slate-800 text-white rounded-xl shadow-lg overflow-hidden relative">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-500 rounded-full opacity-20 blur-xl"></div>
+                    <div class="p-6 relative z-10">
+                        <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Contato
+                        </h3>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-slate-700 p-2 rounded text-blue-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase font-medium">E-mail</p>
+                                    <a href="mailto:CONTATO@BILRO.DIGITAL" class="text-sm font-semibold hover:text-blue-300 transition break-all">CONTATO@BILRO.DIGITAL</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="bg-slate-700 p-2 rounded text-green-400">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase font-medium">Telefone / WhatsApp</p>
+                                    <a href="https://wa.me/5579998505425" target="_blank" class="text-sm font-semibold hover:text-green-300 transition block">
+                                        (79) 99850-5425
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Localização -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-100 bg-slate-50">
+                        <h3 class="font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-red-500"></i> Localização
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <address class="not-italic space-y-1 text-sm text-slate-600">
+                            <p class="font-bold text-slate-800 text-base">AVENIDA PAULISTA, 0</p>
+                            <p>Bairro: BELA VISTA</p>
+                            <p>São Paulo - SP</p>
+                            <p class="mt-2 font-mono bg-slate-100 inline-block px-2 py-1 rounded text-xs text-slate-700">CEP: 01310-100</p>
+                        </address>
+                        
+                        <div class="mt-4 w-full h-32 bg-slate-200 rounded-lg flex items-center justify-center relative overflow-hidden group cursor-help" title="Localização Aproximada">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Av._Paulista_nights.jpg/640px-Av._Paulista_nights.jpg" alt="Avenida Paulista" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500">
+                           <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                               <span class="text-white font-semibold text-sm drop-shadow-md"><i class="fa-solid fa-map-pin mr-1"></i> Ver no Mapa</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Quadro Societário -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-100 bg-slate-50">
+                        <h3 class="font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-users text-blue-500"></i> Quadro Societário
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center py-4">
+                            <div class="inline-block p-3 rounded-full bg-slate-100 text-slate-400 mb-2">
+                                <i class="fa-solid fa-user-tie text-xl"></i>
+                            </div>
+                            <p class="text-sm text-slate-500">Empresário Individual</p>
+                            <p class="text-xs text-slate-400 mt-1">Sem sócios adicionais</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Seção Política de Privacidade (NOVA) -->
+        <section id="privacidade" class="scroll-mt bg-slate-50 border border-slate-200 rounded-xl p-8">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
+                <i class="fa-solid fa-shield-halved text-2xl text-slate-600"></i>
+                <h2 class="text-2xl font-bold text-slate-800">POLÍTICA DE PRIVACIDADE</h2>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm mb-6 text-sm text-slate-600">
+                <p><strong>CNPJ:</strong> 58.120.832/0001-21</p>
+                <p><strong>Endereço:</strong> AVENIDA PAULISTA, 0, BELA VISTA, SAO PAULO - SP, 01310-100</p>
+            </div>
+
+            <div class="space-y-6 text-slate-700 text-sm leading-relaxed text-justify">
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">1. Finalidade</h4>
+                    <p>Esta política descreve como coletamos, utilizamos e protegemos os dados pessoais dos clientes que interagem conosco por meio de WhatsApp, e-mail, telefone, redes sociais ou durante visitas à nossa loja física.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">2. Dados Coletados</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Informações fornecidas voluntariamente:</strong> Nome, telefone, e-mail, endereço (para orçamentos ou entregas), preferências de estilo e necessidades de decoração.</li>
+                        <li><strong>Dados automáticos:</strong> Registro de interações para atendimento e melhoria de serviços, dados de navegação (se aplicável a site ou redes sociais).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">3. Uso de WhatsApp, Telefone e E-mail</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Finalidades:</strong> Atendimento ao cliente, orçamentos, agendamento de visitas e confirmação de entregas.</li>
+                        <li>Não enviamos mensagens promocionais não solicitadas sem consentimento.</li>
+                        <li><strong>Armazenamento:</strong> Dados de contato e interações são armazenados por 12 meses, exceto quando exigido por lei.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">4. Compartilhamento de Dados</h4>
+                    <p>Não comercializamos ou compartilhamos dados com terceiros para fins publicitários.</p>
+                    <p class="mt-1"><strong>Exceções:</strong> Parceiros de logística (apenas informações necessárias para entrega) e Autoridades legais, mediante requisição formal.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">5. Direitos do Usuário (LGPD)</h4>
+                    <p>Você pode solicitar:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Acesso ou correção dos seus dados.</li>
+                        <li>Exclusão (exceto quando a lei exigir retenção).</li>
+                        <li>Revogação de consentimento (via e-mail ou telefone).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">6. Segurança</h4>
+                    <p>Dados protegidos com acesso restrito à equipe autorizada. Não solicitamos informações sensíveis (como CPF ou cartões de crédito) por mensagens não criptografadas.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">7. Alterações nesta Política</h4>
+                    <p>Atualizações serão comunicadas em nossos canais oficiais.</p>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <h4 class="font-bold text-blue-800 text-base mb-2">8. Contato</h4>
+                    <p>Dúvidas ou solicitações sobre seus dados?</p>
+                    <p class="mt-2"><strong>WhatsApp:</strong> (79) 99850-5425</p>
+                    <p><strong>E-mail:</strong> CONTATO@BILRO.DIGITAL</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="text-center md:text-left">
+                    <p class="text-white font-bold text-xl">BILRO.DIGITAL</p>
+                    <p class="text-sm mt-1 opacity-75">CNPJ: 58.120.832/0001-21</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition text-lg">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="mailto:CONTATO@BILRO.DIGITAL" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 hover:text-white transition text-lg">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/5579998505425" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition text-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+                <div class="text-center md:text-left">
+                    <p>&copy; 2025 Victor Wandriel Bilro dos Santos.</p>
+                    <p>Todos os direitos reservados.</p>
+                </div>
+                <div class="text-center md:text-right flex gap-4">
+                    <a href="#privacidade" class="hover:text-white transition">Termos de Uso</a>
+                    <a href="#privacidade" class="hover:text-white transition">Política de Privacidade</a>
+                    <a href="#contato" class="hover:text-white transition">Mais Informações</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-slate-800 text-white px-6 py-3 rounded-lg shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i class="fa-solid fa-check-circle text-green-400"></i>
+        <span>CNPJ copiado!</span>
+    </div>
+
+    <script>
+        function copyCNPJ() {
+            const cnpj = "58.120.832/0001-21";
+            
+            const el = document.createElement('textarea');
+            el.value = cnpj;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
